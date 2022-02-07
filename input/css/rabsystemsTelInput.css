@@ -1,0 +1,117 @@
+:root {
+    --input-blue: #05C5FD;
+    --input-white: #fff;
+    --input-gray-high: #f2f2f2;
+    --input-gray-medium: #838383;
+    --input-gray: #808080;
+    --input-red: #d60101;
+}
+
+.rabsystems-input {
+    box-sizing: inherit;
+    margin: auto;
+    padding: 0;
+    width: 20rem;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+    .rabsystems-input input {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        padding: .3rem .5rem .3rem 3.5rem;
+        height: 37px;
+        width: 100%;
+        border-radius: 7px;
+        border: 1px solid var(--input-gray);
+       
+    }
+
+.flag-input {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+    .flag-input img {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        width: 40px;
+    }
+
+.flag-list {
+    box-sizing: inherit;
+    margin: 0;
+    position: absolute;
+    margin: 2.5rem 0;
+    border-radius: 7px;
+    width: 100%;
+    max-height: 150px;
+    overflow: hidden;
+    overflow-y: visible;
+    padding: .4rem;
+    /*display: flex;*/
+    display: none;
+    flex-direction: column;
+    justify-items: center;
+    align-items: flex-start;
+    background: var(--input-white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.flag-item {
+    box-sizing: inherit;
+    margin: 0;
+    padding: .3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+    .flag-item:hover {
+        background: var(--input-gray-high);
+    }
+
+    .flag-item span {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        margin-left: .7rem;
+        font-size: .9rem;
+    }
+
+.current-flag-container {
+    box-sizing: inherit;
+    margin: 0 0 0 .5rem;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+    .current-flag-container .flag-item {
+        padding: 0;
+    }
+
+    .current-flag-container .flag-item span {
+        box-sizing: inherit;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+
+.display-ddi {
+    color: var(--input-gray-medium);
+}
+
+.invalid-number {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--input-red) !important;
+}

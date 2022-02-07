@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input/css/rabsystemsTelInput.css">
+    <link rel="stylesheet" href="css/rabsystemsTelInputSite.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <title>Rabsystems Tel Input</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <section class="input-presentation">
+            <h1 class="rabsystems-font">Rabsystems tel input</h1>
+            <p>Input de telefone personalizado da empresa Rabsystems</p>
+
+            <form action="demonstrate-input">
+                <!-- INÍCIO DO INPUT -->
+                <div class="rabsystems-input">
+                    <div class="flag-input">
+                        <div class="current-flag-container"></div>
+                        <div class="flag-list"></div>
+                    </div>
+                    <input type="tel" name="tel" id="tel-input">
+                </div>
+                <!-- FIM DO INPUT -->
+                <input type="submit" value="Enviar" id="demonstrate-input-submit">
+            </form>
+            
+        </section>
+
+        <section class="input-instalation">
+            <h1 class="rabsystems-font">Instalação</h1>
+            <p>Primeiro baixe e inclua no seu projeto o <a href="https://code.jquery.com/jquery-3.6.0.min.js" target="_blank">JQUERY</a>.</p>
+            <p>Em seguida baixe os arquivos CSS e JS abaixo e inclua na sua página HTML.</p>
+            <div class="download-archives">
+                <ul>
+                    <li>
+                        <span><strong>CSS</strong></span>
+                        <a href="input/css/rabsystemsTelInput.css" download="rabsystemsTelInput">rabsystemsTelInput.css v1.0</a>
+                    </li>
+                    <li>
+                        <span><strong>JS</strong></span>
+                        <a href="input/js/rabsystemsTelInput.js" download="rabsystemsTelInput">rabsystemsTelInput.js v1.0</a>
+                    </li>
+                </ul>
+            </div>
+            <p>O arquivo <strong>CSS</strong> deve ser declarado no <strong>HEAD</strong> do <strong>HTML</strong>, enquanto o arquivo <strong>JS</strong> deve ser declarado no <strong>BODY</strong> após o <strong>JQUERY.</strong></p>
+            <p>Depois o seguinte código <strong>HTML</strong> deverá ser escrito para que o input funcione:</p>
+            <div class="code">
+                <div class="inner-code">
+                    &lt;<span class="tag">div</span> <span class="attribute">class</span>="<span class="class">rabsystems-input</span>"&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;<span class="tag">div</span> <span class="attribute">class</span>="<span class="class">flag-input</span>"&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">div</span> <span class="attribute">class</span>="<span class="class">current-flag-container</span>">&lt<span class="tag">/div</span>&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">div</span> <span class="attribute">class</span>="<span class="class">flag-list</span>">&lt<span class="tag">/div</span>&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">/div</span>&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type</span>="<span class="class">tel</span>" <span class="attribute">name</span>="<span class="class">tel</span>" <span class="attribute">id</span>="<span class="class">tel-input</span>"&gt; <br>
+                    &lt;<span class="tag">/div</span>&gt;
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <h5>by Rabsystems</h5>
+    </footer>
+
+    <script src="input/js/rabsystemsTelInput.js"></script>
+
+    <script>
+        $("form").on("submit", e => { // Teste de envio de formulário
+            e.preventDefault();
+
+            let data = [];
+            if (isValidNumber()) {
+                data["tel"] = getTelInputValue();
+                console.log(data)
+            }
+        });
+    </script>
+</body>
+</html>
