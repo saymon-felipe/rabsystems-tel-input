@@ -28,6 +28,18 @@
        
     }
 
+@media (max-width: 728px) {
+    .rabsystems-input {
+        width: 15rem;
+    }
+}
+
+@media (max-width: 528px) {
+    .rabsystems-input {
+        width: 13rem;
+    }
+}
+
 .flag-input {
     box-sizing: inherit;
     margin: 0;
