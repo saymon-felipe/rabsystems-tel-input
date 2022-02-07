@@ -1,2 +1,5 @@
 # rabsystems-tel-input
-&lt;input type="tel"> personalizado da rabsystems.
+(by Rabsystems)
+
+Componente de input do tipo telefone.
+[Acesse o site](https://saymon-felipe.github.io/rabsystems-tel-input/)
