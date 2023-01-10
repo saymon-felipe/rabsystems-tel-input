@@ -22,13 +22,15 @@ function findFlags(country) {
             break;
     }
 
-    return `
-            <div class="flag-item" country_flag="${countryName}" ddi="${countryDdi}" number_placeholder="${formatNumberPlaceholder}">
-                <img src="img/${countryName}-flag.jpg">
-                <span>${countryLabel}</span>
-                <span class="display-ddi">${countryDdi}</span>
-            </div>
-            `
+    let returnString = `
+        <div class="flag-item" country_flag="${countryName}" ddi="${countryDdi}" number_placeholder="${formatNumberPlaceholder}">
+            <img src="img/${countryName}-flag.jpg">
+            <span>${countryLabel}</span>
+            <span class="display-ddi">${countryDdi}</span>
+        </div>
+    `
+
+    return returnString;
 }
 
 function mountTelInputElement() {
@@ -50,7 +52,6 @@ if ($(document).ready()) {
     
     changePlaceholder(input, $(".current-flag-container .flag-item"));
 
-    
     $(document).on("click", e => { // Ao clicar fora da div das flags o container fecha.
         if (!flag.is(e.target) && flag.has(e.target).length === 0) {
             closeFlagSelect();
@@ -103,7 +104,6 @@ if ($(document).ready()) {
             } else {
                 formattedNumber[i] = numberTemplate[i];
             }
-            
         }
 
         input.val(formattedNumber.join(''));
